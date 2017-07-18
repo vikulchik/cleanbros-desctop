@@ -1204,8 +1204,9 @@ td {
   box-sizing: border-box;
   position: absolute;
   width: 238px;
-  top: -99999999px;
-  right: 40px;
+  top: 0;
+  z-index: -1;
+  right: 37px;
 }
 
 .special__item--info:after {
@@ -2981,7 +2982,7 @@ td {
 }
 
 .price-list__last:hover .special__item--info {
-  top: 0;
+ z-index: 1;
 }
 
 .dropdown {
