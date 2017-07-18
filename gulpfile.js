@@ -52,6 +52,7 @@ var paths = {
 };
 
 gulp.task('watch', ()  => {
+  gulp.watch('dev/js/**/*.js', ['concat']);
   gulp.watch([
     'dev/*.html',
     'dev/css/**/*.css',

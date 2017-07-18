@@ -1318,17 +1318,20 @@ td {
   margin-bottom: 20px;
 }
 
-.order-send__input::-webkit-input-placeholder, .order-send__textarea::-webkit-input-placeholder {
+.order-send__input::-webkit-input-placeholder,
+.order-send__textarea::-webkit-input-placeholder {
   font-size: 18px;
   color: black;
 }
 
-.order-send__input:-ms-input-placeholder, .order-send__textarea:-ms-input-placeholder {
+.order-send__input:-ms-input-placeholder,
+.order-send__textarea:-ms-input-placeholder {
   font-size: 18px;
   color: black;
 }
 
-.order-send__input::placeholder, .order-send__textarea::placeholder {
+.order-send__input::placeholder,
+.order-send__textarea::placeholder {
   font-size: 18px;
   color: black;
 }
@@ -1505,7 +1508,8 @@ td {
   justify-content: space-between;
 }
 
-.socials-account__fb, .socials-account__vk {
+.socials-account__fb,
+.socials-account__vk {
   width: 51px;
   height: 48px;
   display: block;
@@ -1714,7 +1718,8 @@ td {
     transform: translateY(-50%);
   }
 
-  .advantages-account__item--like, .advantages-account__item--chat {
+  .advantages-account__item--like,
+  .advantages-account__item--chat {
     border-bottom: 1px solid #e9e8e6;
   }
 
@@ -1936,7 +1941,8 @@ td {
   width: 100%;
 }
 
-.orderNow .rooms__button, .orderNow .rooms__count {
+.orderNow .rooms__button,
+.orderNow .rooms__count {
   border: 1px solid #48423b;
 }
 
@@ -2394,7 +2400,8 @@ td {
     width: 75%;
   }
 
-  .rally .registration__input, .rally .registration__button {
+  .rally .registration__input,
+  .rally .registration__button {
     height: 50px;
   }
 
