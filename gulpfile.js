@@ -1,27 +1,31 @@
-var gulp = require('gulp'),
-    browserSync = require('browser-sync').create(),
-    concat = require('gulp-concat'),
-    spritesmith = require('gulp.spritesmith'),
-    sourcemaps = require('gulp-sourcemaps');
+const gulp = require('gulp');
+const browserSync = require('browser-sync').create();
+const concat = require('gulp-concat');
+const spritesmith = require('gulp.spritesmith');
+const babel = require('gulp-babel');
+const sourcemaps = require('gulp-sourcemaps');
 
 
 // Static server
-gulp.task('browser-sync', function() {
-    browserSync.init({
-        server: {
-            baseDir: "dev"
-        }
-    });
+gulp.task('browser-sync', () => {
+  browserSync.init({
+    server: {
+      baseDir: "dev"
+    }
+  });
 });
 
-gulp.task('concat', function () {
+gulp.task('concat', ()  => {
   return gulp.src(paths.js.location)
     .pipe(concat('app.js'))
+    .pipe(babel({
+      presets: ['es2015', 'stage-0']
+    }))
     .pipe(gulp.dest('dev/js'));
 });
 
 
-gulp.task('sprite', function() {
+gulp.task('sprite',  ()  => {
   var spriteData = gulp.src('dev/img/icons/*.png')
     .pipe(spritesmith({
       imgName: 'sprite.png',
@@ -47,7 +51,7 @@ var paths = {
 
 };
 
-gulp.task('watch', function () {
+gulp.task('watch', ()  => {
   gulp.watch('dev/js/**/*.js', ['concat']);
   gulp.watch([
     'dev/*.html',
@@ -61,5 +65,4 @@ gulp.task('default', [
   'sprite',
   'concat',
   'watch'
-
 ]);

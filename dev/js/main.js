@@ -1,6 +1,6 @@
 //Plugins
 
-var swiper = new Swiper('.swiper-container', {
+new Swiper('.swiper-container', {
   pagination: '.swiper-pagination',
   slidesPerView: 3,
   paginationClickable: true,
@@ -81,8 +81,9 @@ $('.services-view__link').on('click', function (e) {
 //calculator
 
 const wrapper = document.querySelector('.price-list__table');
+const  choose = document.querySelector('.service-change__link');
 
-wrapper.addEventListener('click', function (e) {
+wrapper.addEventListener('click', (e) => {
   e.preventDefault();
   const target = e.target;
 
@@ -92,8 +93,6 @@ wrapper.addEventListener('click', function (e) {
 
     if (input.value > 0) {
       input.value = previousValue - 1;
-    } else {
-      return false
     }
   }
 
@@ -108,27 +107,29 @@ wrapper.addEventListener('click', function (e) {
 
 //Slider
 
-let link = $('.clean-link'),
-  sliderContent = $(".clean-list__slider");
+const link = $('.clean-link');
+const sliderContent = $(".clean-list__slider");
 
-link.on('click', function(e) {
+link.on('click', function (e) {
   e.preventDefault();
+
+  const activeTab = $(this).attr("href");
+
   link.removeClass('active');
   $(this).addClass('active');
   sliderContent.hide();
-  var activeTab = $(this).attr("href");
   $(activeTab).fadeIn();
-  return false;
 });
 
 
 // Read More
-let bg_section = document.querySelector('.background'),
+const bg_section = document.querySelector('.background'),
   read_more = document.querySelector('.reviews .clean-link'),
   more_text = document.querySelector('.more__text');
 
 read_more.addEventListener('click', (e) => {
   e.preventDefault();
+
   bg_section.classList.add('hide');
   read_more.classList.add('hide');
   more_text.classList.add('active-section');
