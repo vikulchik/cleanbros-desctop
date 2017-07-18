@@ -2,7 +2,7 @@
 
 Инструкции по установке моего приложения
 
-1. git clone https://github.com/vikulchik/shop.git shop
+1. git clone https://github.com/vikulchik/cleanbros-desktop
 
 2. cd site
 
