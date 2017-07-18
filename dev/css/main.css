@@ -585,7 +585,7 @@ ul {
   position: relative;
 }
 
-.active-link:after {
+.active-section .clean-list__link:after {
   position: absolute;
   background: url("../img/true.png") no-repeat 0 0;
   width: 30px;
@@ -2419,6 +2419,10 @@ td {
   .slider__text {
     width: 90%;
     margin: auto;
+  }
+
+  .rooms__block .rooms__count {
+    width: 240px;
   }
 
   .slider__description {

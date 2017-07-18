@@ -26,27 +26,31 @@ jQuery(function ($) {
 
 //Accordeon
 
-(function () {
-  var view = $('.clean-list__view');
-  view.on('click', '.clean-list__link', function (e) {
-    e.preventDefault();
-    var item = $(this).closest(view),
-      content = $('.clean-list__section'),
-      items = $(this).next();
-    if (!content.hasClass('active-section')) {
-      $(this).removeClass('active-section');
-      items.addClass('active-section');
-    } else {
-      content.removeClass('active-section');
-    }
-    if (content.hasClass('active-section')) {
-      $(this).addClass('active-link');
-      $('.clean-list__link').next().removeClass('active-link');
-    } else {
-      $('.clean-list__link').removeClass('active-link');
-    }
-  });
-}());
+
+$('.clean-list__link').on('click', function (e) {
+  e.preventDefault();
+
+  var $this = $(this),
+    item = $this.closest('.clean-list__container'),
+    list = $this.closest('.clean-list__view'),
+    items = list.find('.clean-list__container'),
+    content = item.find('.clean-list__section'),
+    otherContent = list.find('.clean-list__section'),
+    duration = 200;
+
+  if (!item.hasClass('active-section')) {
+    items.removeClass('active-section');
+    item.addClass('active-section');
+
+    otherContent.stop(true, true).slideUp(duration);
+    content.stop(true, true).slideDown(duration);
+  } else {
+
+    content.stop(true, true).slideUp(duration);
+    item.stop(true, true).removeClass('active-section');
+  }
+
+});
 
 $('.services-view__link').on('click', function (e) {
   e.preventDefault();
