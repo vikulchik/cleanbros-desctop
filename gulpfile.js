@@ -57,7 +57,7 @@ gulp.task('watch', ()  => {
     'dev/*.html',
     'dev/css/**/*.css',
     'dev/js/**/*.js'
-  ]).on("change", browserSync.reload);
+  ]);
 });
 
 gulp.task('default', [

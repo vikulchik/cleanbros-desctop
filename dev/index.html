@@ -438,11 +438,11 @@
                 <p class="calculator__elements">Количество комнат</p>
                 <div class="rooms rooms__other">
                   <div class="rooms__block owl-carousel owl-theme">
-                    <div class="rooms__count">1 комната</div>
-                    <div class="rooms__count">2 комнаты</div>
-                    <div class="rooms__count">3 комнаты</div>
-                    <div class="rooms__count">4 комнаты</div>
-                    <div class="rooms__count">5+ комнат</div>
+                    <div data-attr="1" class="rooms__count">1 комната</div>
+                    <div data-attr="2" class="rooms__count">2 комнаты</div>
+                    <div data-attr="3" class="rooms__count">3 комнаты</div>
+                    <div data-attr="4" class="rooms__count">4 комнаты</div>
+                    <div data-attr="5" class="rooms__count">5+ комнат</div>
                   </div>
                 </div>
               </div>
@@ -465,7 +465,7 @@
               <div class="price-list__section">
                 <div class="price-list__text">Количество санузлов</div>
                 <a href="#" class="price-list__button price-list__button--prew">prew</a>
-                <input type="text" name="text" value="0" class="price-list__input">
+                <input type="text" name="quantityNum" value="0" class="price-list__input">
                 <a href="#" class="price-list__button price-list__button--next">next</a>
                 <div class="price-list__info">Один санузел входит в базовую стоимость</div>
                 <div class="price-list__last">?
@@ -480,7 +480,7 @@
               <div class="price-list__section">
                 <div class="price-list__text">Мойка окон</div>
                 <a href="#" class="price-list__button price-list__button--prew">prew</a>
-                <input type="text" name="text" value="0" class="price-list__input">
+                <input type="text" name="windowNum" value="0" class="price-list__input">
                 <a href="#" class="price-list__button price-list__button--next">next</a>
                 <div class="price-list__info">350 руб. / шт.</div>
                 <div class="price-list__last">?
@@ -495,7 +495,7 @@
               <div class="price-list__section">
                 <div class="price-list__text">Мытье холодильника внутри</div>
                 <a href="#" class="price-list__button price-list__button--prew">prew</a>
-                <input type="text" name="text" value="0" class="price-list__input">
+                <input type="text" name="fridgeNum" value="0" class="price-list__input">
                 <a href="#" class="price-list__button price-list__button--next">next</a>
                 <div class="price-list__info">350 руб. / шт.</div>
                 <div class="price-list__last">?
@@ -510,7 +510,7 @@
               <div class="price-list__section">
                 <div class="price-list__text"> Мытье духовки/СВЧ</div>
                 <a href="#" class="price-list__button price-list__button--prew">prew</a>
-                <input type="text" name="text" value="0" class="price-list__input">
+                <input type="text" name="bakeNum" value="0" class="price-list__input">
                 <a href="#" class="price-list__button price-list__button--next">next</a>
                 <div class="price-list__info">200 руб. / шт.</div>
                 <div class="price-list__last">?
@@ -525,7 +525,7 @@
               <div class="price-list__section">
                 <div class="price-list__text">Мытье люстры</div>
                 <a href="#" class="price-list__button price-list__button--prew">prew</a>
-                <input type="text" name="text" value="0" class="price-list__input">
+                <input type="text" name="chandelierNum" value="0" class="price-list__input">
                 <a href="#" class="price-list__button price-list__button--next">next</a>
                 <div class="price-list__info">300 руб. / 30 мин</div>
                 <div class="price-list__last">?
@@ -540,7 +540,7 @@
               <div class="price-list__section">
                 <div class="price-list__text"> Глажка</div>
                 <a href="#" class="price-list__button price-list__button--prew">prew</a>
-                <input type="text" name="text" value="0" class="price-list__input">
+                <input type="text" name="ironingNum" value="0" class="price-list__input">
                 <a href="#" class="price-list__button price-list__button--next">next</a>
                 <div class="price-list__info">150 руб. / шт.</div>
                 <div class="price-list__last">?
@@ -555,7 +555,7 @@
               <div class="price-list__section">
                 <div class="price-list__text">Поменять белье</div>
                 <a href="#" class="price-list__button price-list__button--prew">prew</a>
-                <input type="text" name="text" value="0" class="price-list__input">
+                <input type="text" name="underwearNum" value="0" class="price-list__input">
                 <a href="#" class="price-list__button price-list__button--next">next</a>
                 <div class="price-list__info">700 руб. / час</div>
                 <div class="price-list__last">?
@@ -570,7 +570,7 @@
               <div class="price-list__section">
                 <div class="price-list__text">Особые поручения</div>
                 <a href="#" class="price-list__button price-list__button--prew">prew</a>
-                <input type="text" name="text" value="0" class="price-list__input">
+                <input type="text" name="mainNum" value="0" class="price-list__input">
                 <a href="#" class="price-list__button price-list__button--next">next</a>
                 <div class="price-list__info">700 руб. / час</div>
                 <div class="price-list__last">?
@@ -585,7 +585,7 @@
               <div class="price-list__section">
                 <div class="price-list__text">Уборка на балконе</div>
                 <a href="#" class="price-list__button price-list__button--prew">prew</a>
-                <input type="text" name="text" value="0" class="price-list__input">
+                <input type="text" name="balconyNum" value="0" class="price-list__input">
                 <a href="#" class="price-list__button price-list__button--next">next</a>
                 <div class="price-list__info">700 руб. / час</div>
                 <div class="price-list__last">?
@@ -599,8 +599,8 @@
               </div>
               <div class="price-list__section">
                 <div class="price-list__text">Эко-уборка</div>
-                <button  class="service-change__link">Выбрать</button>
-                <button type="reset" class="service-change__reset">Отменить</button>
+                <button  class="service-change__link" data-name="change-eko">Выбрать</button>
+                <button type="reset" class="service-change__reset" data-name="reset-eko">Отменить</button>
                 <div class="price-list__info">+40% к стоимости</div>
                 <div class="price-list__last">?
                   <div class="special__item special__item--info">
@@ -613,8 +613,8 @@
               </div>
               <div class="price-list__section">
                 <div class="price-list__text">Парогенератор</div>
-                <button class="service-change__link">Выбрать</button>
-                <button type="reset" class="service-change__reset">Отменить</button>
+                <button class="service-change__link"  data-name="change-generator">Выбрать</button>
+                <button type="reset" class="service-change__reset" data-name="reset-generator">Отменить</button>
                 <div class="price-list__info">+1500 к стоимости</div>
                 <div class="price-list__last">?
                   <div class="special__item special__item--info">
@@ -627,8 +627,8 @@
               </div>
               <div class="price-list__section">
                 <div class="price-list__text">Заехать за ключами от квартиры</div>
-                <button  class="service-change__link">Выбрать</button>
-                <button type="reset" class="service-change__reset">Отменить</button>
+                <button  class="service-change__link" data-name="change-key">Выбрать</button>
+                <button type="reset" class="service-change__reset" data-name="reset-key">Отменить</button>
                 <div class="price-list__info">300 рублей</div>
                 <div class="price-list__last">?
                   <div class="special__item special__item--info">
@@ -645,6 +645,7 @@
         <div class="container-second">
           <div class="order-send">
             <div class="order-result">
+              <div id="result_text"></div>
               <p class="order-result__text">
                 Уборка квартиры с 1 жилой комнатой и одним санузлом
               </p>
